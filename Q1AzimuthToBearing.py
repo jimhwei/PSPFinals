@@ -1,15 +1,15 @@
 # Reads a series of azimuths from a sequential file
 import csv
 # Converts the azimuths to bearings (in decimal degrees)
-# lst = [45.500000, 100.200000, 214.560000, 303.987654]
+lst = [45.500000, 100.200000, 214.560000, 303.987654]
 # Test Variables
 # azimuth = 45.500000
 # azimuth = 100.200000
 # azimuth = 214.560000
 # azimuth = 303.987654
 
-with open('azimuths.csv') as csvfile: 
-    lst = csv.reader(csvfile, delimiter=',')
+# with open('azimuths.csv') as csvfile: 
+#     lst = csv.reader(csvfile, delimiter=',')
 
 
 print ("Azimuth(dd), Bearing(dd), Bearing(dms)")
