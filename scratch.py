@@ -1,9 +1,10 @@
-def decdeg2dms(dd):
-    mnt,sec = divmod(dd*3600,60)
-    deg,mnt = divmod(mnt,60)
-    print(deg,mnt,sec)
-    return deg,mnt,sec
+import math
 
-dd = 45 + 30.0/60 + 1.0/3600
-print (dd)
-decdeg2dms(dd)
+azimuth = 100.200
+split = math.modf(azimuth)
+# print(split[1], split[0])
+split2 = math.modf(split[0]*60)
+deg = split[1]
+min = split[0]
+sec = split2[0]
+print(int(deg),int(min),int(sec))
