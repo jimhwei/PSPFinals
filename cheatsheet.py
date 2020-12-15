@@ -7,6 +7,9 @@ for row in fo:
     print(row)
 fo.close()
 
+# Conver i in to integers
+lst = [int(i) for i in item]
+
 # math.modf method for splitting lines
 import math
 
