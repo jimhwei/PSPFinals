@@ -22,6 +22,14 @@ min = split[0]
 sec = split2[0]
 print(int(deg),int(min),int(sec))
 
+### extras ### 
+
+# Standard beginnig
+import arcpy
+from arcpy import env
+import os
+cwd = os.getcwd()
+
 # Altnerate csv method
 # with open('azimuths.csv', 'r') as read_obj:
 #     csv_reader = reader(read_obj)
