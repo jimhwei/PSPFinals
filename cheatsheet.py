@@ -22,6 +22,17 @@ min = split[0]
 sec = split2[0]
 print(int(deg),int(min),int(sec))
 
+# Arcpy
+aprx = arcpy.mp.ArcGISProject(r"somepath") # Creates an object
+inlayer = arcpy.mp.LayerFile(r"somepath") # Reference layer files
+map = aprx.listMaps()[0] # List layers
+if arcpy.Describe(cities).shapeType == "Polyline":
+    referencelayer = map.listLayers()[0]
+    map.insertLayer(referencelayer, inlayer, "BEFORE")
+else: 
+aprx.sav()
+
+
 ### extras ### 
 
 # Standard beginnig
