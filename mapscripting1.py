@@ -9,7 +9,7 @@ aprx = arcpy.mp.ArcGISProject(r"D:\GEOM67PSP\Submissions\Assignment2\Question5.a
 cities = r"D:\GEOM67PSP\Submissions\Assignment2\cities.lyrx"
 countries = r"D:\GEOM67PSP\Submissions\Assignment2\country.lyrx"
 # inlayer = arcpy.mp.LayerFile(r"D:\GEOM67PSP\Submissions\Assignment2\cities.lyrx")
-inlayer = arcpy.mp.LayerFile(countries)
+inlayer = arcpy.mp.LayerFile(cities) # Subjected to change depending on your layer
 alayer = cities
 
 # List layers

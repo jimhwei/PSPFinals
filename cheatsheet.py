@@ -29,7 +29,12 @@ map = aprx.listMaps()[0] # List layers
 if arcpy.Describe(cities).shapeType == "Polyline":
     referencelayer = map.listLayers()[0]
     map.insertLayer(referencelayer, inlayer, "BEFORE")
-else: 
+if: 
+    for i in aprx.listMaps():
+        if i.listLayers(x)[0] == atestcond:
+            y = i.listLayers(x)[0]
+
+arcpy.tool_toolset(x, y)
 aprx.sav()
 
 
