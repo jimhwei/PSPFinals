@@ -23,6 +23,7 @@ class Bangle:
 ### Main App ### 
 import csv # This would be on top in a different page
 
+# Loop where we ask user for input and 
 while True:
     deg = int(input("Degree: "))
     mnt = int(input("Minute: "))
@@ -35,7 +36,7 @@ while True:
     bearlist.append(obj.BearingFormat())
     rows = [azlist[0],bearlist[0]]
     # Use methods defined to write to sequential file
-    with open("Q2.csv", "ab+") as f:
+    with open("Q2.csv", "a+") as f:
         writer = csv.writer(f)
         writer.writerow(rows)
     contvalue = input('continue?')
@@ -43,8 +44,6 @@ while True:
         continue
     else:
         break
-
-
 
 test = Bangle(45,30,00,"NE")
 test2 = Bangle(34,33,36,"SW")

@@ -7,6 +7,14 @@ for row in fo:
     print(row)
 fo.close()
 
+with open('azimuths.csv', 'r') as f:
+    reader = csv.reader(f)
+    next(reader)
+    for row in reader:
+        item = row.split(",")
+        print(row)
+fo.close()
+
 # Conver i in to integers
 lst = [int(i) for i in item]
 
